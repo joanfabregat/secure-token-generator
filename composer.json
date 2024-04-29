@@ -1,12 +1,12 @@
 {
   "name": "joanfabregat/secure-token-generator",
-  "version": "v1.5",
+  "version": "v1.0",
   "description": "Generate cryptographically secure alphanumeric tokens in PHP",
   "homepage": "https://github.com/joanfabregat/secure-token-generator",
   "type": "library",
   "license": "MIT",
   "require": {
-    "php": ">=8.3"
+    "php": ">=8.2"
   },
   "autoload": {
     "psr-4": {

@@ -23,7 +23,7 @@ final class SecureTokenGenerator
      * @return string
      * @throws RandomException
      */
-    public function generate(int $length, bool $allowDigits = true, bool $allowSpecialChars = false): string
+    public static function generate(int $length, bool $allowDigits = true, bool $allowSpecialChars = false): string
     {
         $key = '';
 

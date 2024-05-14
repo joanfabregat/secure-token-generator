@@ -23,12 +23,24 @@ composer require joanfabregat/secure-token-generator
 ```php
 use JoanFabregat\SecureTokenGenerator\SecureTokenGenerator;
 
-$token = SecureTokenGenerator::generate(32);
-echo $token; // will echo a 32 characters long alphanumeric token
+// A simple token
+$token = SecureTokenGenerator::generate(16);
+echo $token; // will echo a 16 characters long alphanumeric token
 
-$token = SecureTokenGenerator::generate(16, allowSpecialChars: true);
-echo $token; // will echo a 16 characters long alphanumeric token with special characters
+// With all the options
+$token = SecureTokenGenerator::generate(
+    length: 32, 
+    allowDigits: true, // 1234567890
+    allowSpecialChars: true, // !@#$%^&*()_+{}|:"<>?[];',./
+    allowUppercase: true, // ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    allowLowercase: true, // abcdefghijklmnopqrstuvwxyz
+);
+echo $token; // will echo a 32 characters long alphanumeric token with special characters
 
+// An integer token
+$token = SecureTokenGenerator::generateInt(6);
+echo is_int($token); // will echo true
+echo $token; // will echo a 6 digits long integer token (ie. 123456)
 ```
 
 ## License

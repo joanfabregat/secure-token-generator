@@ -1,6 +1,6 @@
 {
   "name": "joanfabregat/secure-token-generator",
-  "version": "v1.2",
+  "version": "v1.3",
   "description": "Generate cryptographically secure alphanumeric tokens in PHP",
   "homepage": "https://github.com/joanfabregat/secure-token-generator",
   "type": "library",

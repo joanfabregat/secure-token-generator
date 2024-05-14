@@ -63,5 +63,16 @@ final class SecureTokenGenerator
 
         return $token;
     }
+
+    /**
+     * Generates a random integer token.
+     *
+     * @param int $length The token length
+     * @return int The generated integer
+     * @throws RandomException If the random generator fails
+     */
+    public static function generateInt(int $length): int
+    {
+        return random_int(10 ** ($length - 1), 10 ** $length - 1);
     }
 }

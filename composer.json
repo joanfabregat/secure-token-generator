@@ -1,7 +1,7 @@
 {
   "name": "joanfabregat/secure-token-generator",
-  "version": "v1.3",
   "description": "Generate cryptographically secure alphanumeric tokens in PHP",
+  "keywords": ["token", "security", "random", "password", "generator"],
   "homepage": "https://github.com/joanfabregat/secure-token-generator",
   "type": "library",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "JoanFabregat\\SecureTokenGenerator\\": "src"
+      "JoanFabregat\\SecureTokenGenerator\\": "src/"
     }
   },
   "autoload-dev": {
@@ -28,13 +28,9 @@
   "config": {
     "preferred-install": {
       "*": "dist"
-    },
-    "allow-plugins": {
-      "php-http/discovery": true
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "^11",
-    "spatie/ray": "^1.41"
+    "phpunit/phpunit": "^11.5.50"
   }
 }

@@ -41,12 +41,17 @@ final class SecureTokenGeneratorTest extends TestCase
         self::assertMatchesRegularExpression('/^[0-9]+$/', $token);
     }
 
-    public function testGenerateWithSpecialChars(): void
+    public function testGenerateSpecialCharsOnly(): void
     {
-        $token = SecureTokenGenerator::generate(200, allowSpecialChars: true);
+        $token = SecureTokenGenerator::generate(
+            200,
+            allowDigits: false,
+            allowUppercase: false,
+            allowLowercase: false,
+            allowSpecialChars: true
+        );
         self::assertSame(200, strlen($token));
-        // with 200 chars and special chars enabled, at least one should appear
-        self::assertMatchesRegularExpression('/[^a-zA-Z0-9]/', $token);
+        self::assertMatchesRegularExpression('/^[^a-zA-Z0-9]+$/', $token);
     }
 
     public function testGenerateUniqueness(): void
